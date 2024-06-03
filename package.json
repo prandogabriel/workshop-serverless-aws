@@ -8,10 +8,7 @@
   "engines": {
     "node": ">=20"
   },
-  "dependencies": {
-    "@middy/core": "^3.4.0",
-    "@middy/http-json-body-parser": "^3.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@serverless/typescript": "^3.0.0",
     "@types/aws-lambda": "^8.10.71",

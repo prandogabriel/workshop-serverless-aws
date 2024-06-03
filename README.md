@@ -9,6 +9,16 @@
 ```bash
     npm run start
 ```
+testar req
+```bash
+    curl --request POST \
+    --url http://localhost:3000/dev/hello \
+    --header 'Content-Type: application/json' \
+    --header 'User-Agent: insomnia/8.6.1' \
+    --data '{
+        "name": "Frederic"
+    }'
+```
 
 ### Deploy da app
 ```bash
@@ -19,3 +29,4 @@
 ```bash
     npm run sls remove --stage dev
 ```
+
