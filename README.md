@@ -22,11 +22,11 @@ testar req
 
 ### Deploy da app
 ```bash
-    npm run sls deploy --stage dev
+    npm run sls deploy -- --stage dev
 ```
 
 ### Deletar a app
 ```bash
-    npm run sls remove --stage dev
+    npm run sls remove -- --stage dev
 ```
 

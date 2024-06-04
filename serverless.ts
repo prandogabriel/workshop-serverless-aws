@@ -33,6 +33,29 @@ const serverlessConfiguration: AWS = {
       concurrency: 10,
     },
   },
+  resources: {
+    Resources: {
+      urlsTable: {
+        Type: 'AWS::DynamoDB::Table',
+        Properties: {
+          TableName: 'urls',
+          AttributeDefinitions: [
+            {
+              AttributeName: 'shortUrl',
+              AttributeType: 'S',
+            },
+          ],
+          KeySchema: [
+            {
+              AttributeName: 'shortUrl',
+              KeyType: 'HASH',
+            },
+          ],
+          BillingMode: 'PAY_PER_REQUEST',
+        },
+      },
+    },
+  }
 };
 
 module.exports = serverlessConfiguration;
