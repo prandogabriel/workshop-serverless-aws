@@ -5,6 +5,7 @@ import * as functions from '@functions/index';
 const serverlessConfiguration: AWS = {
   service: 'workshop-serverless-aws',
   frameworkVersion: '3',
+  useDotenv: true,
   plugins: ['serverless-esbuild', 'serverless-offline'],
   provider: {
     name: 'aws',
@@ -16,6 +17,7 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1',
       NODE_OPTIONS: '--enable-source-maps --stack-trace-limit=1000',
+      RETRIEVE_URL: '${env:RETRIEVE_URL, "http://localhost:3000/dev"}',
     },
   },
   // import the function via paths
