@@ -6,7 +6,7 @@ export const main: APIGatewayProxyHandlerV2 = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: `Hello ${body.name}, welcome to the exciting Serverless world!`
+      message: `received: ${body.url}`
     })
   }
 };
