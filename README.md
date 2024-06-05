@@ -30,3 +30,14 @@ testar req
     npm run sls remove -- --stage dev
 ```
 
+
+### Criar url encurtada
+```bash
+    curl --request POST \
+    --url http://localhost:3000/dev/shortener \
+    --header 'Content-Type: application/json' \
+    --header 'User-Agent: insomnia/8.6.1' \
+    --data '{
+        "url": "https://docs.google.com/presentation/d/1TSHEy-mnCo9PcbIchY43Na67zXHTDgvpqd6pocNJMtQ/edit?usp=sharing"
+    }'
+```
